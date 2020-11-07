@@ -3,7 +3,7 @@ set -e
 
 ## polybar
 sudo yum install -y polybar
-cp dot.config/polybar/config ~/.config/polybar
+cp configs/polybar/config ~/.config/polybar
 
 
 ## I3
@@ -12,7 +12,7 @@ wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-
 #sudo yum install --allowerasing *.rpm
 sudo yum install i3-*.rpm
 
-cp dot.config/i3/config ~/.config/i3
+cp configs/i3/config ~/.config/i3
 
 
 # rofi
@@ -21,8 +21,8 @@ sudo yum install -y rofi
 
 # Terminal
 sudo yum install -y terminator
-mkdir .config/terminator
-cp dot.config/terminator .config/terminator/config
+mkdir ~/.config/terminator
+cp config/terminator ~/.config/terminator/config
 
 
 
