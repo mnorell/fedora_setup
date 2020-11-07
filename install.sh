@@ -10,13 +10,13 @@ cp configs/polybar/config ~/.config/polybar
 wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-4.18.3-6.fc33.x86_64.rpm
 wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-doc-4.18.3-6.fc33.noarch.rpm
 #sudo yum install --allowerasing *.rpm
-sudo yum install i3-*.rpm
+sudo yum install -y i3-*.rpm
 
 cp configs/i3/config ~/.config/i3
 
 
 # rofi
-sudo yum -y install -y rofi
+sudo yum install -y rofi
 
 
 # Terminal
@@ -37,7 +37,7 @@ rm -rf ttf
 cat configs/nice_PS1 >> ~/.bashrc
 
 # Some essential tools
-ranger terminator chromium thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor
+sudo yum install -y ranger terminator chromium thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor
 
 echo INSTALL jdk
 echo INSTALL intellij
