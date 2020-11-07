@@ -83,6 +83,10 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# switch workspace to other monitor
+bindsym $mod+$alt+Left move workspace to output left
+bindsym $mod+$alt+Right move workspace to output right
+
 # toggle split orientation
 bindsym $mod+BackSpace split toggle
 
@@ -179,10 +183,6 @@ bindsym $mod+$alt+0 move container to workspace number 10; workspace number 10
 #bindsym $mod+$alt+Ctrl+7 move container to workspace $ws17; workspace $ws17
 #bindsym $mod+$alt+Ctrl+8 move container to workspace $ws18; workspace $ws18
 #bindsym $mod+$alt+Ctrl+9 move container to workspace $ws19; workspace $ws19
-
-# move current workspace to another screen
-bindsym $mod+$alt+Left i3-msg move workspace to output left
-bindsym $mod+$alt+Right i3-msg move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -343,6 +343,7 @@ exec --no-startup-id compton -f --config $compton_config
 
 # Start polybar
 exec --no-startup-id polybar Virtual1
+exec --no-startup-id polybar Virtual2
 
 # Add shift+caps keyboard shortcut to toggle keyboard layouts
 #exec --no-startup-id /usr/bin/setxkbmap -layout us,se -variant ,us -option 'grp:shift_caps_toggle'
