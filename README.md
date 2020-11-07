@@ -1,70 +1,51 @@
 ## Guest additions.
-Testa paket fran repo...
-sudo dnf install -y dkms kernel-devel gcc bzip2 make curl
-insert iso...
-cd /run/media/username/VBox_GAs_6.0.18
-sudo ./VBoxLinuxAdditions.run
+# Testa paket fran repo...
+# sudo dnf install -y dkms kernel-devel gcc bzip2 make curl
+# insert iso...
+# cd /run/media/username/VBox_GAs_6.0.18
+# sudo ./VBoxLinuxAdditions.run
 
 
 ## polybar
-//beh;vs nog inte...
-sudo dnf install -y @development-tools cmake gcc-c++ autoconf automake
-sudo dnf install xcb-util-xrm-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-cursor-devel xcb-util-image-devel alsa-lib-devel pulseaudio-libs-devel jsoncpp-devel libmpdclient-devel libcurl-devel wireless-tools-devel libnl3-devel cairo-devel i3-devel
-
-sudo yum install polybar
-
-kopiera in config .config/polybar
-
-kolla att vi har i3 support...
-polybar --version
-
-
-# Fonts...
-sudo dnf install powerline-fonts fontawesome-fonts
+sudo yum install -y polybar
+cp dot.config/polybar/config ~/.config/polybar
 
 
 ## I3
-Download 
-https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-4.18.3-6.fc33.x86_64.rpm
-https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-doc-4.18.3-6.fc33.noarch.rpm
-sudo yum install --allowerasing *.rpm
-sudo yum install *.rpm
+wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-4.18.3-6.fc33.x86_64.rpm
+wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-doc-4.18.3-6.fc33.noarch.rpm
+#sudo yum install --allowerasing *.rpm
+sudo yum install i3-*.rpm
 
-kopiera in i3 config .config/i3
+cp dot.config/i3/config ~/.config/i3
+
 
 # rofi
-sudo yum install rofi
-FIXA CONFIG>..
+sudo yum install -y rofi
 
 
+# Terminal
+sudo yum install -y terminator
+mkdir .config/terminator
+cp dot.config/terminator .config/terminator/config
 
 
-
-# Terminal? gnome 'r bra?
-cp -r dot.config/terminator ~/.config/
 
 # Jetbrains mono font * (check for later version)
-wget https://download.jetbrains.com/fonts/JetBrainsMono-1.0.3.zip
-unzip JetBrainsMono-1.0.3.zip 
-sudo mv JetBrainsMono-1.0.3/ttf/*.ttf /usr/share/fonts/
-rm -rf JetBrainsMono-1.0.3*
+wget https://download.jetbrains.com/fonts/JetBrainsMono-2.001.zip
+unzip JetBrainsMono-*.zip 
+sudo mv ttf/*.ttf /usr/share/fonts/
+rm -rf JetBrainsMono-*
+rm -rf ttf
 
 # PS1
 cat nice_PS1 >> ~/.bashrc
 
-
-# Looks...
-sudo apt -y install  numix-gtk-theme numix-icon-theme
-echo "INSTALL FONTS..."
-
 # Some essential tools
-sudo apt -y install ranger terminator thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor powertop
-sudo snap install gotop
+ranger terminator chromium thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor
 
-# apps
-sudo yum install chromium thunar ranger
-jdk
-intellij
+echo INSTALL jdk
+echo INSTALL intellij
 
 
 # Gedit
@@ -132,3 +113,4 @@ gsettings set org.xfce.mousepad.preferences.window statusbar-visible true
 gsettings set org.xfce.mousepad.preferences.window toolbar-icon-size 'small-toolbar'
 gsettings set org.xfce.mousepad.preferences.window toolbar-style 'icons'
 gsettings set org.xfce.mousepad.preferences.window toolbar-visible false
+
