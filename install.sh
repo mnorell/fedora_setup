@@ -1,10 +1,3 @@
-## Guest additions.
-# Testa paket fran repo...
-# sudo dnf install -y dkms kernel-devel gcc bzip2 make curl
-# insert iso...
-# cd /run/media/username/VBox_GAs_6.0.18
-# sudo ./VBoxLinuxAdditions.run
-
 
 ## polybar
 sudo yum install -y polybar
