@@ -1,3 +1,5 @@
+#!/bin/bash 
+set -e
 
 ## polybar
 sudo yum install -y polybar
