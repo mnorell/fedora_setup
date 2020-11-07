@@ -3,16 +3,18 @@ set -e
 
 ## polybar
 sudo yum install -y polybar
-cp configs/polybar/config ~/.config/polybar
+mkdir ~/.config/polybar
+cp configs/polybar/config ~/.config/polybar/
 
 
 ## I3
+sudo yum install -y i3
 wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-4.18.3-6.fc33.x86_64.rpm
 wget https://copr-be.cloud.fedoraproject.org/results/fuhrmann/i3-gaps/fedora-33-x86_64/01716365-i3-gaps/i3-gaps-doc-4.18.3-6.fc33.noarch.rpm
-#sudo yum install --allowerasing *.rpm
-sudo yum install -y i3-*.rpm
-
-cp configs/i3/config ~/.config/i3
+sudo yum install --allowerasing *.rpm
+#sudo yum install -y i3-*.rpm
+mkdir ~/.config/i3
+cp configs/i3/config ~/.config/i3/
 
 
 # rofi
