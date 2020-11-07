@@ -16,13 +16,13 @@ cp configs/i3/config ~/.config/i3
 
 
 # rofi
-sudo yum install -y rofi
+sudo yum -y install -y rofi
 
 
 # Terminal
 sudo yum install -y terminator
 mkdir ~/.config/terminator
-cp config/terminator ~/.config/terminator/config
+cp configs/terminator ~/.config/terminator/config
 
 
 
