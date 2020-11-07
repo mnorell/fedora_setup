@@ -34,7 +34,7 @@ rm -rf JetBrainsMono-*
 rm -rf ttf
 
 # PS1
-cat nice_PS1 >> ~/.bashrc
+cat configs/nice_PS1 >> ~/.bashrc
 
 # Some essential tools
 ranger terminator chromium thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor
