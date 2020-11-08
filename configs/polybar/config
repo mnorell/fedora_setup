@@ -52,8 +52,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = xwindow
-modules-right = cpu memory xkeyboard date powermenu
+modules-center = 
+modules-right = xwindow
 
 tray-position = right
 tray-padding = 2
@@ -69,8 +69,8 @@ inherit = bar/Virtual1
 monitor = Virtual2
 
 modules-left = i3
-modules-center = xwindow
-modules-right = 
+modules-center = 
+modules-right = cpu memory xkeyboard date
 
 
 [module/xwindow]

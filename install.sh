@@ -111,3 +111,6 @@ gsettings set org.xfce.mousepad.preferences.window toolbar-icon-size 'small-tool
 gsettings set org.xfce.mousepad.preferences.window toolbar-style 'icons'
 gsettings set org.xfce.mousepad.preferences.window toolbar-visible false
 
+# Background
+xsetroot -solid "#FF88DD"
+
