@@ -43,7 +43,7 @@ bindsym $mod+x  exec $terminal_path -e /usr/bin/ranger
 bindsym $mod+Shift+q kill
 
 # rofi app and window launchers
-bindsym $mod+space exec rofi -show run
+bindsym $mod+space exec rofi -show drun
 bindsym $mod+s exec rofi -show ssh
 bindsym $mod+Ctrl+space exec rofi -show window
 
@@ -186,38 +186,8 @@ gaps outer 0
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
-#set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
-#set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
-#set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
-#set_from_resource $focused.color.indicator i3-wm.client.focused.color.indicator "#268bd2"
-#set_from_resource $focused.color.child_border i3-wm.client.focused.color.child_border
-
-#set_from_resource $focused_inactive.color.border i3-wm.client.focused_inactive.color.border "#002b36"
-#set_from_resource $focused_inactive.color.background i3-wm.client.focused_inactive.color.background "#073642"
-#set_from_resource $focused_inactive.color.text i3-wm.client.focused_inactive.color.text "#839496"
-#set_from_resource $focused_inactive.color.indicator i3-wm.client.focused_inactive.color.indicator "#073642"
-#set_from_resource $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border 
-
-#set_from_resource $unfocused.color.border i3-wm.client.unfocused.color.border "#002b36"
-#set_from_resource $unfocused.color.background i3-wm.client.unfocused.color.background "#073642"
-#set_from_resource $unfocused.color.text i3-wm.client.unfocused.color.text "#839496"
-#set_from_resource $unfocused.color.indicator i3-wm.client.unfocused.color.indicator "#073642"
-#set_from_resource $unfocused.color.child_border i3-wm.client.unfocused.color.child_border
-
-#set_from_resource $urgent.color.border i3-wm.client.urgent.color.border "#002b36"
-#set_from_resource $urgent.color.background i3-wm.client.urgent.color.background "#dc322f"
-#set_from_resource $urgent.color.text i3-wm.client.urgent.color.text "#fdf6e3"
-#set_from_resource $urgent.color.indicator i3-wm.client.urgent.color.indicator "#002b36"
-#set_from_resource $urgent.color.child_border i3-wm.client.urgent.color.child_border
-
 
 # Window Border color
-# class                 border                             background                         text                               indicator                          child_border
-#client.focused          $focused.color.border              $focused.color.background          $focused.color.text                $focused.color.indicator           $focused.color.child_border
-#client.focused_inactive $focused_inactive.color.border     $focused_inactive.color.background $focused_inactive.color.text       $focused_inactive.color.indicator  $focused_inactive.color.child_border
-#client.unfocused        $unfocused.color.border            $unfocused.color.background        $unfocused.color.text              $unfocused.color.indicator         $unfocused.color.child_border
-#client.urgent           $urgent.color.border               $urgent.color.background           $urgent.color.text                 $urgent.color.indicator            $urgent.color.child_border
-
 # class                 border  backgr. text    indicator child_border
 client.focused          #ff1100 #ff1100 #ffffff #ff1100   #ff1100
 client.focused_inactive #666666 #5f676a #ffffff #484e50   #666666
@@ -244,6 +214,12 @@ focus_follows_mouse no
 # Start polybar
 exec --no-startup-id polybar Virtual1
 exec --no-startup-id polybar Virtual2
+
+# Start network manager
+exec nm-applet
+
+# Solid color background
+exec xsetroot -solid "#FF88DD"
 
 # Add shift+caps keyboard shortcut to toggle keyboard layouts
 #exec --no-startup-id /usr/bin/setxkbmap -layout us,se -variant ,us -option 'grp:shift_caps_toggle'

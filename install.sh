@@ -22,9 +22,9 @@ sudo yum install -y rofi
 
 
 # Terminal
-sudo yum install -y terminator
-mkdir ~/.config/terminator
-cp configs/terminator ~/.config/terminator/config
+#sudo yum install -y terminator
+#mkdir ~/.config/terminator
+#cp configs/terminator ~/.config/terminator/config
 
 
 
@@ -39,7 +39,7 @@ rm -rf ttf
 cat configs/nice_PS1 >> ~/.bashrc
 
 # Some essential tools
-sudo yum install -y ranger terminator chromium thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor
+sudo yum install -y network-manager-applet ranger terminator chromium thunar mousepad gedit gnome-tweaks gnome-calculator tree gnome-system-monitor
 
 echo INSTALL jdk
 echo INSTALL intellij
